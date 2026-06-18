@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ERTime101 Support - Get help with questions, issues, and feature requests">
+    <title>ERTime101 Support - Help & Contact</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            margin: 30px 0;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-info h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        /* Form Styles */
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 87, 108, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        /* Delete Account Section */
+        .delete-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .delete-section h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .delete-section .form-container {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+        }
+
+        .delete-section .form-group label {
+            color: #f5576c;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .warning-box h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .warning-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            color: #856404;
+        }
+
+        .success-message {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            display: none;
+        }
+
+        .success-message.show {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .faq-item {
+            margin: 20px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .faq-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 10px;
+        }
+
+        .faq-toggle {
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: transparent;
+            border: none;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← Back to Home</a>
+            <h1>💬 ERTime101 Support</h1>
+            <p>We're here to help!</p>
+        </header>
+
+        <div class="content">
+            <!-- Tabs Navigation -->
+            <div class="tabs">
+                <button class="tab active" onclick="switchTab('contact')">📧 Contact</button>
+                <button class="tab" onclick="switchTab('faq')">❓ FAQ</button>
+                <button class="tab" onclick="switchTab('privacy')">🔒 Privacy</button>
+                <button class="tab" onclick="switchTab('delete')">🗑️ Delete Account</button>
+            </div>
+
+            <!-- Contact Tab -->
+            <div id="contact-tab" class="tab-content active">
+                <div class="contact-info">
+                    <h2>📧 Contact Us</h2>
+                    <p>Have questions, encounter issues, or want to request features?</p>
+                    <a href="mailto:zub165@yahoo.com">✉️ zub165@yahoo.com</a>
+                </div>
+
+                <div class="form-container">
+                    <h2>📝 Send Us a Message</h2>
+                    <form id="contactForm" onsubmit="handleContactForm(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic...</option>
+                                <option value="bug">🐛 Bug Report</option>
+                                <option value="feature">💡 Feature Request</option>
+                                <option value="question">❓ General Question</option>
+                                <option value="technical">🔧 Technical Support</option>
+                                <option value="other">📋 Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Please describe your issue, question, or request in detail..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="device">Device Information (Optional)</label>
+                            <input type="text" id="device" name="device" placeholder="e.g., iPhone 14, Android 13, etc.">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                    <div id="contactSuccess" class="success-message">
+                        ✅ Thank you! Your message has been sent. We'll get back to you soon.
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🐛 Reporting Issues</h2>
+                    <p>If you encounter any bugs or issues:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li>Describe the problem in detail</li>
+                        <li>Include your device model and OS version</li>
+                        <li>Mention what you were doing when the issue occurred</li>
+                        <li>Send screenshots if possible</li>
+                    </ul>
+                    <p style="margin-top: 15px;">
+                        Email us at: <a href="mailto:zub165@yahoo.com">zub165@yahoo.com</a>
+                    </p>
+                </div>
+
+                <div class="section">
+                    <h2>💡 Feature Requests</h2>
+                    <p>Have an idea for a new feature? We'd love to hear it!</p>
+                    <p style="margin-top: 10px;">
+                        Send your suggestions to: <a href="mailto:zub165@yahoo.com">zub165@yahoo.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Tab -->
+            <div id="faq-tab" class="tab-content">
+                <div class="section">
+                    <h2>📚 Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <h3>
+                            How do I find nearby hospitals?
+                            <span class="faq-toggle">▼</span>
+                        </h3>
+                        <div class="faq-answer">
+                            <p>Use the "Nearby" tab in the app. The app will automatically detect your location and show hospitals within your selected radius. You can also search for specific hospitals or filter by specialty.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <h3>
+                            How accurate are the wait times?
+                            <span class="faq-toggle">▼</span>
+                        </h3>
+                        <div class="faq-answer">
+                            <p>Wait times are estimated using AI-powered predictions based on historical data, current conditions, and real-time reports from users. They are estimates and may vary.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <h3>
+                            Can I use the app offline?
+                            <span class="faq-toggle">▼</span>
+                        </h3>
+                        <div class="faq-answer">
+                            <p>Yes! The app uses hybrid storage, which means your data is saved locally. You can view previously loaded hospitals and your saved records even without an internet connection. Data will sync when you're back online.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <h3>
+                            How do I change my distance unit (miles/km)?
+                            <span class="faq-toggle">▼</span>
+                        </h3>
+                        <div class="faq-answer">
+                            <p>Go to Settings in the app and select your preferred distance unit. The change will apply immediately across all screens.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <h3>
+                            Is my data secure?
+                            <span class="faq-toggle">▼</span>
+                        </h3>
+                        <div class="faq-answer">
+                            <p>Yes, we take your privacy seriously. All data is encrypted in transit and stored securely. You can request data export or account deletion at any time through the Privacy section.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Tab -->
+            <div id="privacy-tab" class="tab-content">
+                <div class="section">
+                    <h2>🔒 Privacy & Data Management</h2>
+                    <p>Your privacy is important to us. This section explains how we handle your data and your rights.</p>
+                </div>
+
+                <div class="section">
+                    <h2>📊 Data Export</h2>
+                    <p>You can request a copy of all your data stored in our system.</p>
+                    <div class="form-container">
+                        <form id="exportForm" onsubmit="handleDataExport(event)">
+                            <div class="form-group">
+                                <label for="exportEmail">Your Email *</label>
+                                <input type="email" id="exportEmail" name="exportEmail" required placeholder="Enter your registered email">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Request Data Export</button>
+                        </form>
+                        <div id="exportSuccess" class="success-message">
+                            ✅ Your data export request has been submitted. You will receive an email with your data within 7 business days.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>🔐 Privacy Policy</h2>
+                    <p><strong>Data Collection:</strong> We collect only the data necessary to provide our services:</p>
+                    <ul style="margin: 15px 0; padding-left: 20px;">
+                        <li>Location data (with your permission) to find nearby hospitals</li>
+                        <li>Account information (email, name) for authentication</li>
+                        <li>Medical records and patient data (stored locally and optionally synced)</li>
+                        <li>App usage data for improving our services</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Data Storage:</strong> Data is stored using hybrid storage - locally on your device and optionally synced to secure servers.</p>
+                    <p style="margin-top: 15px;"><strong>Data Sharing:</strong> We do not sell your data to third parties. Data is only shared as necessary to provide our services.</p>
+                    <p style="margin-top: 15px;"><strong>Your Rights:</strong> You have the right to access, export, and delete your data at any time.</p>
+                </div>
+            </div>
+
+            <!-- Delete Account Tab -->
+            <div id="delete-tab" class="tab-content">
+                <div class="delete-section">
+                    <h2>🗑️ Delete Your Account</h2>
+                    <p>If you wish to delete your account and all associated data, please use the form below.</p>
+                    
+                    <div class="warning-box">
+                        <h3>⚠️ Important Warning</h3>
+                        <p><strong>This action cannot be undone!</strong> Deleting your account will permanently remove:</p>
+                        <ul>
+                            <li>Your account and profile information</li>
+                            <li>All saved medical records and patient data</li>
+                            <li>All app preferences and settings</li>
+                            <li>All synced data from our servers</li>
+                            <li>Your login credentials</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>Note:</strong> Local data on your device may still remain until you uninstall the app.</p>
+                    </div>
+
+                    <div class="form-container">
+                        <form id="deleteForm" onsubmit="handleAccountDeletion(event)">
+                            <div class="form-group">
+                                <label for="deleteEmail">Your Email *</label>
+                                <input type="email" id="deleteEmail" name="deleteEmail" required placeholder="Enter your registered email">
+                            </div>
+                            <div class="form-group">
+                                <label for="deleteReason">Reason for Deletion (Optional)</label>
+                                <select id="deleteReason" name="deleteReason">
+                                    <option value="">Select a reason...</option>
+                                    <option value="privacy">Privacy concerns</option>
+                                    <option value="no-longer-use">No longer using the app</option>
+                                    <option value="found-alternative">Found an alternative</option>
+                                    <option value="technical-issues">Technical issues</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="deleteConfirm">Type "DELETE" to confirm *</label>
+                                <input type="text" id="deleteConfirm" name="deleteConfirm" required placeholder="Type DELETE in capital letters">
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="deleteCheckbox" required>
+                                    I understand that this action is permanent and cannot be undone
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-danger">🗑️ Delete My Account</button>
+                        </form>
+                        <div id="deleteSuccess" class="success-message">
+                            ✅ Your account deletion request has been submitted. You will receive a confirmation email. Your account will be deleted within 30 days unless you contact us to cancel the request.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>📧 Alternative: Contact Us</h2>
+                    <p>If you prefer, you can also request account deletion by emailing us directly:</p>
+                    <p style="margin-top: 15px;">
+                        <strong>Email:</strong> <a href="mailto:zub165@yahoo.com?subject=Account Deletion Request">zub165@yahoo.com</a>
+                    </p>
+                    <p style="margin-top: 10px;">Please include your registered email address in your request.</p>
+                </div>
+            </div>
+
+            <!-- Resources Section (Always Visible) -->
+            <div class="section">
+                <h2>🔗 Resources</h2>
+                <p style="margin-top: 15px;"><strong>Support Documentation:</strong></p>
+                <p>
+                    <a href="https://zub165.github.io/er-wait-time/support.md" target="_blank" rel="noopener">
+                        https://zub165.github.io/er-wait-time/support.md
+                    </a>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>📱 App Information</h2>
+                <p><strong>App Name:</strong> ERTime101</p>
+                <p><strong>Package ID:</strong> com.ertime.erTimeNew</p>
+                <p><strong>Current Version:</strong> 1.10.0 (Build 31)</p>
+                <p><strong>Platforms:</strong> Android, iOS, Web</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 ERTime101 by Innovators Generation. All rights reserved.</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                Thank you for using ERTime101!
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // FAQ toggle
+        function toggleFAQ(item) {
+            item.classList.toggle('active');
+        }
+
+        // Contact form handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            
+            // In a real implementation, this would send to a backend API
+            console.log('Contact form submitted:', data);
+            
+            // Show success message
+            document.getElementById('contactSuccess').classList.add('show');
+            event.target.reset();
+            
+            // Optionally send email via mailto
+            const subject = encodeURIComponent(data.subject + ' - ' + data.name);
+            const body = encodeURIComponent(data.message + '\n\nDevice: ' + (data.device || 'Not specified'));
+            window.location.href = `mailto:zub165@yahoo.com?subject=${subject}&body=${body}`;
+        }
+
+        // Data export handler
+        function handleDataExport(event) {
+            event.preventDefault();
+            const email = document.getElementById('exportEmail').value;
+            
+            // In a real implementation, this would call a backend API
+            console.log('Data export requested for:', email);
+            
+            // Show success message
+            document.getElementById('exportSuccess').classList.add('show');
+            event.target.reset();
+            
+            // Optionally send email
+            const subject = encodeURIComponent('Data Export Request - ERTime101');
+            const body = encodeURIComponent(`I would like to request a copy of all my data.\n\nEmail: ${email}`);
+            window.location.href = `mailto:zub165@yahoo.com?subject=${subject}&body=${body}`;
+        }
+
+        // Account deletion handler
+        function handleAccountDeletion(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const email = formData.get('deleteEmail');
+            const confirm = formData.get('deleteConfirm');
+            const reason = formData.get('deleteReason');
+            
+            if (confirm !== 'DELETE') {
+                alert('Please type "DELETE" in capital letters to confirm.');
+                return;
+            }
+            
+            // In a real implementation, this would call a backend API
+            console.log('Account deletion requested for:', email, 'Reason:', reason);
+            
+            // Show success message
+            document.getElementById('deleteSuccess').classList.add('show');
+            event.target.reset();
+            
+            // Send email notification
+            const subject = encodeURIComponent('Account Deletion Request - ERTime101');
+            const body = encodeURIComponent(
+                `I would like to delete my account and all associated data.\n\n` +
+                `Email: ${email}\n` +
+                `Reason: ${reason || 'Not specified'}\n\n` +
+                `I understand this action is permanent and cannot be undone.`
+            );
+            window.location.href = `mailto:zub165@yahoo.com?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>

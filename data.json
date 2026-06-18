@@ -1,0 +1,16 @@
+{
+  "hospitals": [],
+  "patients": [],
+  "waitTimes": {},
+  "settings": {
+    "maxWaitTime": 180,
+    "refreshInterval": 300,
+    "version": "1.0.0"
+  },
+  "symptoms": [
+    "Fever", "Cough", "Headache", "Shortness of Breath", "Chest Pain",
+    "Fatigue", "Muscle Aches", "Sore Throat", "Nausea", "Vomiting",
+    "Diarrhea", "Dizziness", "Loss of Appetite", "Abdominal Pain", "Joint Pain",
+    "Rash", "Chills", "Runny Nose", "Sneezing", "Swelling"
+  ]
+} 
